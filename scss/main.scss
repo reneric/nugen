@@ -7,9 +7,25 @@ a.nolink{
 	opacity: 0;
 	@include transition(opacity 0.35s ease);
 }
+.introbg{
+		background-image: url('../img/headerbg.png');
+		z-index: 9;
+		background-repeat: repeat-x;
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 200px;
+		right: 0;
+	}
 header#masthead{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	z-index: 99;
+
 	.container{
-		height: 680px;
+		@include transition(all 0.15s ease);
 		a.home-link{}
 		#navbar{
 			nav#site-navigation{
@@ -28,3 +44,94 @@ header#masthead{
 		}
 	}
 }
+#intro{
+	.flexslider{
+		position: relative;
+		ul.slides{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			background-color: #000;
+			li{
+				height: 680px;
+				opacity: 0;
+				@include transition(opacity 0.35s ease);
+				background-repeat: no-repeat;
+				background-size: 1600px;
+				background-position: center;
+			}
+		}
+	}
+}
+#primary{
+	#content{
+		@extend .container;
+	}
+}
+#content[role="home"]{
+	@extend .container;
+	.row{
+		margin-top: 60px;
+		.welcome{
+			padding-right: 0;
+			p{
+				@include font($font,30px,$bold, #999999);
+				text-transform: uppercase;
+				line-height: 32px;
+			}
+			span{
+				height: 10px;
+				background-image: url("../img/redstripes.png");
+				background-repeat:repeat-x;
+				display: block;	
+				width: 123px;
+			}
+		}
+		a{	
+			display: block;
+			position: relative;
+			min-height: 250px;
+			padding-right: 0;
+			img{
+				width:100%;
+				position: relative;
+				left: 0;
+				opacity: 0;
+			}
+			&.services{
+				img{
+					margin-top: -33px;
+				}
+			}
+			&.recentwork{
+				
+				img{
+					margin-top: -50px;
+				}
+			}
+		}
+		h1{
+			@include font($font,18px,normal, #ffffff);
+			letter-spacing: -0.02em;
+			text-transform: uppercase;
+			background-color: $red;
+			position: absolute;
+			bottom: 0;
+			left: 15px;
+			right: 0;
+			text-align: center;
+			line-height: 45px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

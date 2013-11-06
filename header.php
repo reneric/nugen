@@ -48,6 +48,7 @@
 			</div><!-- container -->
 		</header><!-- #masthead -->
 		<div id="intro">
+		<div class="introbg"></div>
 			<div class="flexslider">
 				<ul class="slides">
 					<li style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/truck.png');"></li>

@@ -1,4 +1,4 @@
-.container {
+.container, #primary #content, #content[role="home"] {
   width: 1000px;
   margin: 0 auto;
   padding: 0; }
@@ -29,9 +29,94 @@ h2 {
   -o-transition: opacity 0.35s ease;
   transition: opacity 0.35s ease; }
 
-header#masthead .container {
-  height: 680px; }
-  header#masthead .container #navbar nav#site-navigation {
-    margin-top: 25px; }
+.introbg {
+  background-image: url("../img/headerbg.png");
+  z-index: 9;
+  background-repeat: repeat-x;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 200px;
+  right: 0; }
+
+header#masthead {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  z-index: 99; }
+  header#masthead .container, header#masthead #primary #content, #primary header#masthead #content, header#masthead #content[role="home"] {
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+    transition: all 0.15s ease; }
+    header#masthead .container #navbar nav#site-navigation, header#masthead #primary #content #navbar nav#site-navigation, #primary header#masthead #content #navbar nav#site-navigation, header#masthead #content[role="home"] #navbar nav#site-navigation {
+      margin-top: 25px; }
+
+#intro .flexslider {
+  position: relative; }
+  #intro .flexslider ul.slides {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #000; }
+    #intro .flexslider ul.slides li {
+      height: 680px;
+      opacity: 0;
+      -webkit-transition: opacity 0.35s ease;
+      -moz-transition: opacity 0.35s ease;
+      -ms-transition: opacity 0.35s ease;
+      -o-transition: opacity 0.35s ease;
+      transition: opacity 0.35s ease;
+      background-repeat: no-repeat;
+      background-size: 1600px;
+      background-position: center; }
+
+#content[role="home"] .row {
+  margin-top: 60px; }
+  #content[role="home"] .row .welcome {
+    padding-right: 0; }
+    #content[role="home"] .row .welcome p {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #999999;
+      text-transform: uppercase;
+      line-height: 32px; }
+    #content[role="home"] .row .welcome span {
+      height: 10px;
+      background-image: url("../img/redstripes.png");
+      background-repeat: repeat-x;
+      display: block;
+      width: 123px; }
+  #content[role="home"] .row a {
+    display: block;
+    position: relative;
+    min-height: 250px;
+    padding-right: 0; }
+    #content[role="home"] .row a img {
+      width: 100%;
+      position: relative;
+      left: 0;
+      opacity: 0; }
+    #content[role="home"] .row a.services img {
+      margin-top: -33px; }
+    #content[role="home"] .row a.recentwork img {
+      margin-top: -50px; }
+  #content[role="home"] .row h1 {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    background-color: #a51d23;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 0;
+    text-align: center;
+    line-height: 45px; }
 
 /*# sourceMappingURL=main.css.map */

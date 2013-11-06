@@ -14,8 +14,21 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
+		<div id="content" class="site-content" role="home">
+			<div class="row">
+				<div class="col-sm-4 welcome">
+					<p>Nu-Gen provides a new generation of design and durable products to the oil field and heavy haul trucking industry.</p>
+					<span></span>
+				</div>
+				<a class="col-sm-4 services" href="<?php bloginfo('url'); ?>/servicespackages" title="View our services &amp; packages">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/services.png" alt="alt text">
+					<h1>View Our Services &amp; Packages</h1>
+				</a>
+				<a class="col-sm-4 recentwork" href="<?php bloginfo('url'); ?>/servicespackages" title="View our recent work">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/recentwork.png" alt="alt text">
+					<h1>View Our Recent Work</h1>
+				</a>
+			</div>
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				
