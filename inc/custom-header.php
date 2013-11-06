@@ -62,7 +62,7 @@ function twentythirteen_custom_header_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'twentythirteen_custom_header_setup', 11 );
+//add_action( 'after_setup_theme', 'twentythirteen_custom_header_setup', 11 );
 
 /**
  * Load our special font CSS files.

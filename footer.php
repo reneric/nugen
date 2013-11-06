@@ -20,7 +20,7 @@
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
-
+<script type="text/javascript" data-project="nugen" src="http://localhost:48626/takana.js"></script>
 	<?php wp_footer(); ?>
 </body>
 </html>

@@ -99,7 +99,7 @@ button,
 input,
 select,
 textarea {
-	font-family: "Source Sans Pro", Helvetica, sans-serif;
+	font-family: "Roboto", Helvetica, sans-serif;
 }
 
 body {
@@ -764,7 +764,7 @@ img.wp-smiley,
 	border-left: 1px solid #f2f2f2;
 	border-right: 1px solid #f2f2f2;
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 100%;
 	width: 100%;
 }
 
@@ -798,6 +798,7 @@ img.wp-smiley,
 
 .site-header {
 	position: relative;
+	background-color: #000;
 }
 
 .site-header .home-link {
@@ -805,10 +806,12 @@ img.wp-smiley,
 	display: block;
 	margin: 0 auto;
 	max-width: 1080px;
-	min-height: 230px;
 	padding: 0 20px;
 	text-decoration: none;
-	width: 100%;
+	height: 100px;
+	background-image: url('img/logo.png');
+	background-repeat: no-repeat;
+	width: 200px;
 }
 
 .site-header .site-title:hover {
@@ -821,6 +824,7 @@ img.wp-smiley,
 	line-height: 1;
 	margin: 0;
 	padding: 58px 0 10px;
+	text-indent: -9999px;
 }
 
 .site-description {
@@ -845,7 +849,7 @@ img.wp-smiley,
 ul.nav-menu,
 div.nav-menu > ul {
 	margin: 0;
-	padding: 0 40px 0 0;
+	padding: 0 0px 0 0;
 }
 
 .nav-menu li {
@@ -854,12 +858,14 @@ div.nav-menu > ul {
 }
 
 .nav-menu li a {
-	color: #141412;
+	color: #cbcbcb;
 	display: block;
 	font-size: 15px;
 	line-height: 1;
 	padding: 15px 20px;
 	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .nav-menu li:hover > a,
@@ -903,13 +909,19 @@ ul.nav-menu li:hover > ul,
 .nav-menu ul li:hover > ul {
 	display: block;
 }
-
+header#masthead .navbar{
+	background-color:transparent;
+	background-image:none;
+	padding:0;
+	width:790px;
+}
 .nav-menu .current_page_item > a,
 .nav-menu .current_page_ancestor > a,
 .nav-menu .current-menu-item > a,
 .nav-menu .current-menu-ancestor > a {
-	color: #bc360a;
-	font-style: italic;
+	color: #ffffff;
+	font-style: normal;
+	text-transform: uppercase;
 }
 
 .menu-toggle {

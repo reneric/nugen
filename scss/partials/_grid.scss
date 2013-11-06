@@ -1,7 +1,12 @@
 // Grid and layout
-$width:1255px;
+$container:1000px;
 $nav-max-height:100px;
 $grid-width:990px;
 $buffer:60px;
 $slider-height:400px;
 $gutter:15px;
+.container{
+	width: $container;
+	margin: 0 auto;
+	padding: 0;
+}

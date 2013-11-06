@@ -3,3 +3,28 @@
 a.nolink{
 
 }
+#page img {
+	opacity: 0;
+	@include transition(opacity 0.35s ease);
+}
+header#masthead{
+	.container{
+		height: 680px;
+		a.home-link{}
+		#navbar{
+			nav#site-navigation{
+				margin-top: 25px;
+				.menu-main-container{
+					#menu-main{
+						li{
+							&.current_page_item{
+								a{}
+							}
+							a{}
+						}
+					}
+				}
+			}
+		}
+	}
+}
