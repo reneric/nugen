@@ -286,6 +286,10 @@ function twentythirteen_paging_nav() {
 }
 endif;
 
+/* Add custom functions */
+get_template_part('hatchit/custom-functions');
+
+
 if ( ! function_exists( 'twentythirteen_post_nav' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
