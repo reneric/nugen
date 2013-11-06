@@ -1,5 +1,5 @@
 <?php
-$version = '2013-10-06';
+$version = '10-06-2013';
 function enqueue_scripts(){
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/bootstrap.css', array(), $version );
 	wp_enqueue_style( 'bootstrap_theme', get_template_directory_uri().'/css/bootstrap-theme.css', array(), $version );
