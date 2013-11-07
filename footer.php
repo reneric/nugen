@@ -11,12 +11,24 @@
 ?>
 
 		</div><!-- #main -->
+		<div id="footer-bar">
+			<div class="container">
+				<span class="ribbon"></span>
+				<ul class="social">
+					<li><a href="#" class="tw"></a></li>
+					<li><a href="#" class="fb"></a></li>
+					<li><a href="#" class="yt"></a></li>
+					<li><a href="#" class="gp"></a></li>
+				</ul>
+				<div class="call">Call Us at <span>(225)382-2006</span></div>
+			</div>
+		</div>
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php get_sidebar( 'main' ); ?>
-
 			<div class="site-info">
-				<?php do_action( 'twentythirteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentythirteen' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?></a>
+				<?php wp_nav_menu( array( 'menu' => 'Main', 'menu_class' => 'nav-menu' ) ); ?>
+				<div class="copy">
+					<p>&copy; 2013 Nu-Gen, LLC., All Rights Reserved.   Site Designed and Developed by <a target="_blank" href="http://yolodesign.com">YOLO</a></p>
+				</div>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->

@@ -25,35 +25,11 @@ get_header(); ?>
 					<h1>View Our Services &amp; Packages</h1>
 				</a>
 				<a class="col-sm-4 recentwork" href="<?php bloginfo('url'); ?>/servicespackages" title="View our recent work">
+					<span class="featured"></span>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/recentwork.png" alt="alt text">
 					<h1>View Our Recent Work</h1>
 				</a>
 			</div>
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-						<div class="entry-thumbnail">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<?php endif; ?>
-
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					</header><!-- .entry-header -->
-
-					<div class="entry-content">
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-					</div><!-- .entry-content -->
-
-					<footer class="entry-meta">
-						<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-					</footer><!-- .entry-meta -->
-				</article><!-- #post -->
-			<?php endwhile; ?>
-
 		</div><!-- #content -->
 	</div><!-- #primary -->
 

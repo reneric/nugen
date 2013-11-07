@@ -24,7 +24,7 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,500italic,500,400italic,100italic,300,300italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Changa+One:400,400italic|Roboto:400,100,500italic,500,400italic,100italic,300,300italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
@@ -51,7 +51,14 @@
 		<div class="introbg"></div>
 			<div class="flexslider">
 				<ul class="slides">
-					<li style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/truck.png');"></li>
+					<li style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/truck.png');">
+						<div class="container">
+							<div class="caption col-md-7 col-md-offset-5">
+								<p>The truck stop <span>you don&apos;t</span> want to pass up</p>
+								<a href="#" class="button">Contact us today!</a>
+							</div>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>

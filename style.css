@@ -792,7 +792,7 @@ img.wp-smiley,
  */
 
 /**
- * 4.1 Site Header
+ * 4.1 Site Header 
  * ----------------------------------------------------------------------------
  */
 
@@ -869,7 +869,7 @@ div.nav-menu > ul {
 
 .nav-menu li:hover > a,
 .nav-menu li a:hover {
-	background-color: #220e10;
+	background-color: transparent;
 	color: #fff;
 }
 
@@ -2507,7 +2507,7 @@ footer.entry-meta {
  */
 
 .site-footer {
-	background-color: #e8e5ce;
+	background-color: #0e0e0f;
 	color: #686758;
 	font-size: 14px;
 	text-align: center;
@@ -2568,8 +2568,8 @@ footer.entry-meta {
 
 .site-info {
 	margin: 0 auto;
-	max-width: 1040px;
-	padding: 30px 0;
+	max-width: 1000px;
+	padding: 30px 0px;
 	width: 100%;
 }
 
