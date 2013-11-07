@@ -4,6 +4,7 @@
 @import "buttons";
 @import "mixins";
 @import "grid";
+@import "lightbox";
 
 .trans{
 	@include transition(color 0.35s ease);

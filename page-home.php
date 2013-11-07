@@ -12,7 +12,21 @@
  */
 
 get_header(); ?>
-
+<div id="intro" role="large">
+<div class="introbg"></div>
+	<div class="flexslider">
+		<ul class="slides">
+			<li style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/truck.png');">
+				<div class="container">
+					<div class="caption col-md-7 col-md-offset-5">
+						<p>The truck stop <span>you don&apos;t</span> want to pass up</p>
+						<a href="#" class="button">Contact us today!</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="home">
 			<div class="row">

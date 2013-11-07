@@ -7,7 +7,7 @@
     border-top: $size solid #{setTriangleColor($direction, "top", $color)};
 }
  
-@mixin columns($col, $gap){
+@mixin columns($col, $gap...){
 -webkit-column-count: $col;
 -webkit-column-gap: $gap;
 -moz-column-count: $col;
