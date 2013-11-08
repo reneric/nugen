@@ -15,12 +15,12 @@
 			<div class="container">
 				<span class="ribbon"></span>
 				<ul class="social">
-					<li><a href="#" class="tw"></a></li>
-					<li><a href="#" class="fb"></a></li>
-					<li><a href="#" class="yt"></a></li>
-					<li><a href="#" class="gp"></a></li>
+					<li><a href="<?php the_field('twitter','options'); ?>" class="tw"></a></li>
+					<li><a href="<?php the_field('facebook','options'); ?>" class="fb"></a></li>
+					<li><a href="<?php the_field('youtube','options'); ?>" class="yt"></a></li>
+					<li><a href="<?php the_field('gp','options'); ?>" class="gp"></a></li>
 				</ul>
-				<div class="call">Call Us at <span>(225)382-2006</span></div>
+				<div class="call">Call Us at <span><?php the_field("phone","options"); ?></span></div>
 			</div>
 		</div>
 		<footer id="colophon" class="site-footer" role="contentinfo">

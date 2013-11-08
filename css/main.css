@@ -276,6 +276,9 @@ h2 {
   font-size: 18px;
   line-height: 24px; }
 
+#lightbox.lightbox {
+  z-index: 999999; }
+
 #page img {
   opacity: 0;
   -webkit-transition: opacity 0.2s ease;
@@ -743,6 +746,13 @@ header#masthead {
     text-transform: uppercase; }
   #primary #content[role="contact"] #map .mapframe {
     width: 350px;
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
     height: 220px;
     background-image: url("../img/map.png");
     background-repeat: no-repeat;

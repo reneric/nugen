@@ -18,107 +18,25 @@ get_header(); ?>
 		<h1><?php the_title(); ?></h1>
 	</div>
 </div>
-<div class="summary">
-	<div class="container">
-		<div class="col-sm-9 content">
-			<p><?php the_field("welcome_text"); ?></p>
-			<span></span>
-		</div>
-		<div class="col-sm-3 call">
-			<div class="questions">
-				<h5>Questions?</h5>
-				<a href="#" class="button">Contact Us</a>
-			</div>
-		</div>
-	</div>
-</div>
+<?php page_summary(); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="packages">
 			<div id="packages" class="clearfix">
 				<div class="col-sm-6 column">
+				<?php if(get_field('packages')): ?>
+					<?php 	$count = count(get_field('packages')); 
+						$i=1;
+						$half = $count/2;
+					?>
+					<?php while(has_sub_field('packages')): ?>
 					<div class="package">
-						<h4>Basic Frac Package</h4>
-						<ul class="list">
-							<li>45K Hydraulic Winch</li>
-							<li>Basic Square tube headache rack</li>
-							<li>Crossflow Hydraulic System</li>
-							<li>18 LED Escort Light</li>
-							<li>Paint Rig Black</li>
-							<li>Option: Non-skid fenders and in-frame tool box</li>
-						</ul>
+						<h4><?php the_sub_field("package_name"); ?></h4>
+						<?php the_sub_field('package_list'); ?>
 					</div>
-					<div class="package">
-						<h4>Basic Frac Package</h4>
-						<ul class="list">
-							<li>45K Hydraulic Winch</li>
-							<li>Basic Square tube headache rack</li>
-							<li>Crossflow Hydraulic System</li>
-							<li>18 LED Escort Light</li>
-							<li>Paint Rig Black</li>
-							<li>Basic Square tube headache rack</li>
-							<li>Crossflow Hydraulic System</li>
-							<li>18 LED Escort Light</li>
-							<li>Paint Rig Black</li>
-							<li>Option: Non-skid fenders and in-frame tool box</li>
-						</ul>
-					</div>
-					<div class="package">
-						<h4>Basic Frac Package</h4>
-						<ul class="list">
-							<li>45K Hydraulic Winch</li>
-							<li>Basic Square tube headache rack</li>
-							<li>Crossflow Hydraulic System</li>
-							<li>18 LED Escort Light</li>
-							<li>Paint Rig Black</li>
-							<li>Option: Non-skid fenders and in-frame tool box</li>
-						</ul>
-					</div>
-				</div><!-- column -->
-				<div class="col-sm-6 column">
-					<div class="package">
-						<h4>Basic Frac Package</h4>
-						<ul class="list">
-							<li>45K Hydraulic Winch</li>
-							<li>Basic Square tube headache rack</li>
-							<li>Crossflow Hydraulic System</li>
-							<li>18 LED Escort Light</li>
-							<li>Paint Rig Black</li>
-							<li>Option: Non-skid fenders and in-frame tool box</li>
-						</ul>
-					</div>
-					<div class="package">
-						<h4>Basic Frac Package</h4>
-						<ul class="list">
-							<li>45K Hydraulic Winch</li>
-							<li>Basic Square tube headache rack</li>
-							<li>Crossflow Hydraulic System</li>
-							<li>18 LED Escort Light</li>
-							<li>Paint Rig Black</li>
-							<li>Option: Non-skid fenders and in-frame tool box</li>
-						</ul>
-					</div>
-					<div class="package">
-						<h4>Basic Frac Package</h4>
-						<ul class="list">
-							<li>45K Hydraulic Winch</li>
-							<li>Basic Square tube headache rack</li>
-							<li>Crossflow Hydraulic System</li>
-							<li>18 LED Escort Light</li>
-							<li>Paint Rig Black</li>
-							<li>Option: Non-skid fenders and in-frame tool box</li>
-						</ul>
-					</div>
-					<div class="package">
-						<h4>Basic Frac Package</h4>
-						<ul class="list">
-							<li>45K Hydraulic Winch</li>
-							<li>Basic Square tube headache rack</li>
-							<li>Crossflow Hydraulic System</li>
-							<li>18 LED Escort Light</li>
-							<li>Paint Rig Black</li>
-							<li>Option: Non-skid fenders and in-frame tool box</li>
-						</ul>
-					</div>
+					<?php 
+						echo $column = ($i==round($half)) ? '</div><div class="col-sm-6 column">' : '';
+					 ?>
+					<?php $i++;endwhile;endif; ?>
 				</div><!-- column -->
 			</div>
 

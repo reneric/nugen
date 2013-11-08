@@ -18,61 +18,25 @@ get_header(); ?>
 		<h1><?php the_title(); ?></h1>
 	</div>
 </div>
-<div class="summary">
-	<div class="container">
-		<div class="col-sm-9 content">
-			<p>We Cary a full line of truck accessories including toolboxes, fuel transfer tanks, hose reels, compressors, and much more.
-</p>
-			<span></span>
-		</div>
-		<div class="col-sm-3 call">
-			<div class="questions">
-				<h5>Questions?</h5>
-				<a href="<?php bloginfo('url') ?>/contact" class="button">Contact Us</a>
-			</div>
-		</div>
-	</div>
-</div>
+<?php page_summary();  ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="about">
 			<div id="recentwork" class="row">
 				<h2>View our equipment offerings</h2>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-1" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
-					<div class="gradient"></div>
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-2" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
-					<div class="gradient"></div>
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-2" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
-					<div class="gradient"></div>
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-4" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
-					<div class="gradient"></div>
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-5" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
-					<div class="gradient"></div>
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-6" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
-					<div class="gradient"></div>
-				</a>
+				<?php $args = array ( 'post_type' => "projects", 'posts_per_page' => 6 );
+				$custom_query = new WP_Query( $args );
+				if ( $custom_query->have_posts() ):
+				   	while ( $custom_query->have_posts() ) : $custom_query->the_post();
+				   	$thumb = wp_get_attachment_image_src( get_field('photo'),false);
+				 ?>
+					    <a href="<?php echo $thumb[0]; ?>" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-1" >
+						<span>Enlarge</span>
+						<?php echo wp_get_attachment_image( get_field('photo'), 'project' , false); ?>
+						<h5><?php the_title(); ?></h5>
+						<div class="gradient"></div>
+					</a>
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->

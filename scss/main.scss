@@ -3,7 +3,9 @@
 a.nolink{
 
 }
-
+#lightbox.lightbox{
+	z-index: 999999;
+}
 
 #page img {
 	opacity: 0;
@@ -468,6 +470,9 @@ header#masthead{
 		}
 		.mapframe{
 			width: 350px;
+			display: block;
+			opacity: 0;
+			@include transition(opacity 0.2s ease);
 			height: 220px;
 			background-image: url("../img/map.png");
 			background-repeat:no-repeat;

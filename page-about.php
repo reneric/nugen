@@ -45,30 +45,20 @@ get_header(); ?>
 			</div>
 			<div id="recentwork" class="row">
 				<h2>Some of our recent work</h2>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-1" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-2" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-2" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-4" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-5" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-				</a>
-				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-6" >
-					<span>Enlarge</span>
-					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
-				</a>
+				<?php $args = array ( 'post_type' => "projects", 'posts_per_page' => 6 );
+				$custom_query = new WP_Query( $args );
+				if ( $custom_query->have_posts() ):
+				   	while ( $custom_query->have_posts() ) : $custom_query->the_post();
+				   	$thumb = wp_get_attachment_image_src( get_field('photo'),false);
+				 ?>
+					    <a href="<?php echo $thumb[0]; ?>" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-1" >
+						<span>Enlarge</span>
+						<?php echo wp_get_attachment_image( get_field('photo'), 'project' , false); ?>
+						<h5><?php the_title(); ?></h5>
+						<div class="gradient"></div>
+					</a>
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
 		</div><!-- #content -->
 	</div><!-- #primary -->

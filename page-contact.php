@@ -25,7 +25,9 @@ get_header(); ?>
 			</div>
 			<div id="map" class="col-sm-6">
 				<h1>Our Contact Info</h1>
-				<div class="mapframe"></div>
+				<a class="mapframe" href="https://maps.google.com/maps?q=2069+Commercial+Drive+Port+Allen,+LA+70867&hnear=2069+Commercial+Dr,+Port+Allen,+Louisiana+70767&gl=us&t=m&z=16" target="_blank">
+					
+				</a>
 				<ul class="addy">
 					<li>2069 Commercial Drive</li>
 					<li>Port Allen, LA 70867</li>
