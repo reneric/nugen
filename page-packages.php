@@ -21,7 +21,7 @@ get_header(); ?>
 <div class="summary">
 	<div class="container">
 		<div class="col-sm-9 content">
-			<p>Nu-Gen is a rapidly growing company in the oilfield truck up-fitting industry.  We offer the following Service packages.</p>
+			<p><?php the_field("welcome_text"); ?></p>
 			<span></span>
 		</div>
 		<div class="col-sm-3 call">

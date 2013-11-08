@@ -35,7 +35,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="about">
 			<div id="recentwork" class="row">
-				<h2>Some of our recent work</h2>
+				<h2>View our equipment offerings</h2>
 				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-1" >
 					<span>Enlarge</span>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">

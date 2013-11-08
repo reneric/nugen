@@ -312,6 +312,7 @@ header#masthead{
 				height: 47px;
 				display: block;
 				line-height: 42px;
+				background-color: rgba(255,255,255,0.5);
 				float: left;
 				padding: 0;
 				margin: 30px 0 0;
@@ -364,6 +365,7 @@ header#masthead{
 				text-align: center;
 				line-height: 200px;
 				top: 0;
+				z-index: 9999;
 				opacity: 0;
 				bottom: 0;
 				background-color: rgba(156,16,19,0.8);
@@ -371,6 +373,24 @@ header#masthead{
 			}
 			img{
 				max-width: 100%;
+			}
+			h5{
+				@include font($font,16px,normal, #fff);
+				position: absolute;
+				z-index: 999;
+				bottom: 0;
+				padding: 0 15px;
+			}
+			div.gradient{
+				background-image: url("../img/galgradient.png");
+				background-repeat:repeat-x;
+				z-index: 99;
+				background-position:center bottom;
+				top: 0;
+				position: absolute;
+				bottom: 0;
+				left: 10px;
+				right: 10px;
 			}
 		}
 	}
@@ -431,6 +451,72 @@ header#masthead{
 		}
 	}
 }
+#primary #content[role="contact"]{
+	#contactform{
+		margin-top: 30px;
+		padding-left: 0;
+		padding-right: 50px;
+	}
+	#map{
+		margin-top: 30px;
+		padding-left: 20px;
+		h1{
+			@include font($font,30px,$bold, #999999);
+			line-height: 32px;
+			margin-top: 10px;
+			text-transform: uppercase;
+		}
+		.mapframe{
+			width: 350px;
+			height: 220px;
+			background-image: url("../img/map.png");
+			background-repeat:no-repeat;
+			background-position:center center;
+		}
+		ul.addy{
+			list-style-type: none;
+			margin-left: 0;
+			padding-left: 0;
+			margin-top: 15px;
+			margin-bottom: 20px;
+			li{
+				@include font($font,16px,normal, #111);
+				line-height: 24px;
+			}
+		}
+		ul.contact-info{
+			list-style: none;
+			padding-left: 0;
+			li{
+				@include font($font,16px,normal, #111);
+				line-height: 24px;
+				&.phone{
+					&:before{
+						content:"\f10a";
+						display: block;
+						font-family: fontawesome;
+						float: left;
+						margin-right: 10px;
+						font-size: 20px;
+						margin-left: 1px;
+					}
+				}
+				&.email{
+					&:before{
+						content:"\f0e0";
+						display: block;
+						font-family: fontawesome;
+						float: left;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
 .site-footer{
 	background-color: #0c0c0c;
 	.menu-main-container{

@@ -21,7 +21,8 @@ get_header(); ?>
 <div class="summary">
 	<div class="container">
 		<div class="col-sm-9 content">
-			<p>Check out our selection of our recent projects. Click on an image to enlarge it and read a description.</p>
+			<p>We Cary a full line of truck accessories including toolboxes, fuel transfer tanks, hose reels, compressors, and much more.
+</p>
 			<span></span>
 		</div>
 		<div class="col-sm-3 call">
@@ -35,30 +36,42 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="about">
 			<div id="recentwork" class="row">
-				<h2>Some of our recent work</h2>
+				<h2>View our equipment offerings</h2>
 				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-1" >
 					<span>Enlarge</span>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
+					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
+					<div class="gradient"></div>
 				</a>
 				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-2" >
 					<span>Enlarge</span>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
+					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
+					<div class="gradient"></div>
 				</a>
 				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-2" >
 					<span>Enlarge</span>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
+					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
+					<div class="gradient"></div>
 				</a>
 				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-4" >
 					<span>Enlarge</span>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
+					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
+					<div class="gradient"></div>
 				</a>
 				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-5" >
 					<span>Enlarge</span>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
+					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
+					<div class="gradient"></div>
 				</a>
 				<a href="<?php echo get_template_directory_uri(); ?>/img/bigtruck.png" title="Collaboratively customize multifunctional data through vertical networks." class="galpic col-sm-4" data-lightbox="image-6" >
 					<span>Enlarge</span>
 					<img src="<?php echo get_template_directory_uri(); ?>/img/abouttruck.png" alt="alt text">
+					<h5>Chealsea Heavy-Duty &amp; Bolt</h5>
+					<div class="gradient"></div>
 				</a>
 			</div>
 		</div><!-- #content -->
