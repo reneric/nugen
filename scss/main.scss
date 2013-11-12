@@ -65,18 +65,26 @@ header#masthead{
 	.flexslider{
 		position: relative;
 		background-color: #000;
+		.flex-viewport{
+			opacity: 0;
+			@include transition(opacity 0.35s ease);
+		}
 		ul.slides{
 			margin: 0;
 			padding: 0;
 			width: 100%;
+			
 			background-color: #000;
+			
 			li{
 				height: 680px;
-				opacity: 0;
-				@include transition(opacity 0.35s ease);
+				opacity: 1;
 				background-repeat: no-repeat;
 				background-size: 1600px;
 				background-position: center;
+				&.loaded{
+					opacity: 1;
+				}
 				.caption{
 					margin-top: 75px;
 					padding-left: 50px;
@@ -446,12 +454,14 @@ header#masthead{
 	.call{
 		@include font($font,28px,normal, #434343);
 		text-align: right;
-		font-style: italic;
+		
 		span{
-			font-weight: bold;
-			letter-spacing: -0.05em;
-			font-style: normal;
+			font-weight: normal;
+			font-style: italic;		
 		}
+		font-weight: bold;
+		letter-spacing: -0.05em;
+		font-style: normal;
 	}
 }
 #primary #content[role="contact"]{

@@ -20,7 +20,7 @@
 					<li><a href="<?php the_field('youtube','options'); ?>" class="yt"></a></li>
 					<li><a href="<?php the_field('gp','options'); ?>" class="gp"></a></li>
 				</ul>
-				<div class="call">Call Us at <span><?php the_field("phone","options"); ?></span></div>
+				<div class="call"><span class="hidden-xs">Call Us at </span><?php the_field("phone","options"); ?></div>
 			</div>
 		</div>
 		<footer id="colophon" class="site-footer" role="contentinfo">
@@ -32,7 +32,10 @@
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 	</div><!-- #page -->
-<script type="text/javascript" data-project="nugen" src="http://localhost:48626/takana.js"></script>
-	<?php wp_footer(); ?>
+<?php if ( current_user_can( 'manage_options' ) ) : ?>
+	<script type="text/javascript" data-project="nugen" src="http://localhost:48626/takana.js"></script>
+	<script>document.write('<script src="http://192.168.0.116:35729/livereload.js?snipver=1"></' + 'script>')</script>
+<?php endif; ?>
+<?php wp_footer(); ?>
 </body>
 </html>

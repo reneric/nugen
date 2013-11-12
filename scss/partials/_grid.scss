@@ -6,7 +6,7 @@ $buffer:60px;
 $slider-height:400px;
 $gutter:15px;
 .container{
-	width: $container;
+	max-width: $container;
 	margin: 0 auto;
 	padding: 0;
 	position: relative;

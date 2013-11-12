@@ -1,7 +1,12 @@
 jQuery(function($){
-$('#intro .flexslider ul.slides li').add('.mapframe').cssBackgroundReady(function () {
+$('.mapframe').cssBackgroundReady(function () {
     this.each(function () {
-        $(this).css('opacity', 1);
+        $(this).css('opacity', 1).addClass('loaded');
+    });
+});
+$('#intro .flexslider ul.slides li').cssBackgroundReady(function () {
+    this.each(function () {
+        $('#intro .flexslider .flex-viewport').css('opacity', 1).addClass('loaded');
     });
 });
 $('.flexslider').flexslider({
