@@ -15,16 +15,20 @@ get_header(); ?>
 <div id="intro" role="large">
 <div class="introbg"></div>
 	<div class="flexslider">
+	<?php if(get_field('slider')): ?>
 		<ul class="slides">
-			<li style="background-image:url('<?php echo get_template_directory_uri(); ?>/img/truck.png');">
-				<div class="container">
+		<?php while(has_sub_field('slider')): ?>
+			<li style="background-image:url(<?php the_sub_field('image'); ?>);">
+				<div class="container"> 
 					<div class="caption col-md-7 col-md-offset-5">
-						<p>The truck stop <span>you don&apos;t</span> want to pass up</p>
-						<a href="#" class="button">Contact us today!</a>
+						<p><?php the_sub_field('caption'); ?></p>
+						<a href="<?php the_sub_field('button_link'); ?>" class="button"><?php the_sub_field('button_text'); ?></a>
 					</div>
 				</div>
 			</li>
+		<?php endwhile; ?>
 		</ul>
+	<?php endif; ?>
 	</div>
 </div>
 	<div id="primary" class="content-area">

@@ -332,7 +332,8 @@ header#masthead {
       transition: all 0.15s ease; }
 
 #intro .flexslider {
-  position: relative; }
+  position: relative;
+  background-color: #000; }
   #intro .flexslider ul.slides {
     margin: 0;
     padding: 0;
